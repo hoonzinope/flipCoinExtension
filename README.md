@@ -26,11 +26,12 @@ Flip-the-Coin/
 │
 ├── src/
 │   ├── popup.html         # 확장 프로그램의 사용자 인터페이스
-│   ├── popup.css          # UI 스타일
-│   ├── popup.js           # 게임 로직
-│   ├── hand-coin-16.png   # 아이콘 (16x16)
+│   ├── hand-coin-2966.png   # 아이콘 (16x16)
 │   ├── hand-coin-32.png   # 아이콘 (32x32)
 │   ├── hand-coin-128.png  # 아이콘 (128x128)
+│
+├── scripts/
+│   ├── popup.js           # 게임 로직
 │
 ├── manifest.json          # Chrome 확장 프로그램 설정
 └── README.md              # 프로젝트 문서
