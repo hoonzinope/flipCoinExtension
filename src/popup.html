@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flip coin</title>
+    <style>
+        body {
+            font-family: monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: white;
+        }
+        #game-container {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        #result {
+            white-space: pre-wrap;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            min-height: 15px;
+            display: flex; /* flexbox를 사용하여 가운데 정렬 */
+            align-items: center; /* 세로 가운데 정렬 */
+            justify-content: center; /* 가로 가운데 정렬 */
+        }
+        .bet-button {
+            padding: 5px 10px;
+            font-size: 1em;
+            margin: 2px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: lightblue;
+        }
+        #flipButton {
+            padding: 5px 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            /* 중앙 정렬을 위한 추가 속성 */
+            margin: 10px auto 0; /* 상단 마진, 좌우 자동 마진, 하단 마진 0 */
+            display: block; /* block 요소로 변경하여 margin: auto; 적용 가능하게 함 */
+        }
+        #bet-buttons-container {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 10px;
+        }
+        #point-area { /* point 표시 영역 스타일 */
+            margin-bottom: 10px;
+        }
+        #bet-input { /* 걸 point 입력 input 스타일 */
+            width: 80px;
+            padding: 5px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        
+        <div id="bet-buttons-container">
+            <button class="bet-button" id="headButton">HEAD</button>
+            <button class="bet-button" id="tailButton">TAIL</button>
+        </div>
+        
+        <div id="point-area">
+            💰: <span id="current-point"></span>
+        </div>
+        <div id="bet-point-container">
+            <input type="number" id="bet-input" value="" min="1" placeholder="bet coin">
+        </div>
+        <div id="more-coin-container" style="display: none;">
+            <input type="button" value="more 💵?"/>
+        </div>        
+        <div>
+            <pre id="result"></pre>
+        </div>
+        
+        <button id="flipButton">flip</button>
+    </div>
+    <script src="../scripts/popup.js"></script>
+</body>
+</html>
